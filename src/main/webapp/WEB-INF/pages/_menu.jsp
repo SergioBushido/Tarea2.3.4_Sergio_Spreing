@@ -8,14 +8,13 @@
 </head>
 <body>
 	<div class="menu-container">
-		<a href="${pageContext.request.contextPath}/">Home</a>
-		|
+		<a href="${pageContext.request.contextPath}/">Home</a> | 
 		<a href="${pageContext.request.contextPath}/api/v1/articles">Articles</a>
-		|
 		<a href="${pageContext.request.contextPath}/api/v1/blogs">Blogs</a>
-		|
-		<a href="${pageContext.request.contextPath}/api/v1/codes">Codes</a>
-		
+	    <a href="${pageContext.request.contextPath}/api/v1/code">Code</a> 
+	   <a  href="${pageContext.request.contextPath}/api/v1/detail">Detail</a>
+
+
 	</div>
 </body>
 </html>

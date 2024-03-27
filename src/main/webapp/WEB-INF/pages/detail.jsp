@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>Detail</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
@@ -15,16 +15,16 @@
 
     <fmt:setLocale value="en_US" scope="session" />
 
-    <div class="page-title">Code</div>
+    <div class="page-title">Detail</div>
 
-    <c:forEach items="${code}" var="code">
+    <c:forEach items="${detail}" var="code">
         <div class="product-preview-container">
             <ul>
-                <li>Id: ${code.id}</li>
-                <li>Package Name: ${code.packageName}</li>
+                <li>Id: ${detail.id}</li>
+                <li>Package Name: ${detail.packageName}</li>
                 <li>File: ${code.file}</li>
                 <li>
-                    <a style="color: red;" href="${pageContext.request.contextPath}/code/id=${code.id}">Edit Code</a>
+                    <a style="color: red;" href="${pageContext.request.contextPath}/detail/id=${detail.id}">Edit detail</a>
                 </li>
             </ul>
         </div>
@@ -34,4 +34,4 @@
     <jsp:include page="_footer.jsp" />
 
 </body>
-</html>
+</html>>

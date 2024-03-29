@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @RequestMapping("/api/v1")
 public class ArticleController {
 	
+	
 	@GetMapping("/articles")
 	public String getArticles() {
 		return "articles";

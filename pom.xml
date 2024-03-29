@@ -2,7 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+	<!-- Modelo de versionamiento para el POM -->
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Configuración básica del proyecto -->
 	<groupId>org.dev</groupId>
 	<artifactId>Tarea2.3.4_Sergio_rest-jsp</artifactId>
 	<packaging>war</packaging>
@@ -10,36 +13,38 @@
 	<name>Tarea Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<!-- Propiedades para la versión de Java y la codificación de caracteres -->
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<servlet-api.version>4.0.1</servlet-api.version>
-		<jstl.version>1.2</jstl.version>
-		<jsp-api.version>2.2</jsp-api.version>
-		<springframework.version>5.1.7.RELEASE</springframework.version>
-		<log4j.version>1.2.17</log4j.version>
-		<junit.version>3.8.1</junit.version>
+		<maven.compiler.source>1.8</maven.compiler.source> <!-- Versión de Java fuente -->
+		<maven.compiler.target>1.8</maven.compiler.target> <!-- Versión de Java objetivo -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificación de caracteres -->
+		<servlet-api.version>4.0.1</servlet-api.version> <!-- Versión de la API de Servlet -->
+		<jstl.version>1.2</jstl.version> <!-- Versión de JSTL -->
+		<jsp-api.version>2.2</jsp-api.version> <!-- Versión de la API de JSP -->
+		<springframework.version>5.1.7.RELEASE</springframework.version> <!-- Versión de Spring Framework -->
+		<log4j.version>1.2.17</log4j.version> <!-- Versión de Log4j -->
+		<junit.version>3.8.1</junit.version> <!-- Versión de JUnit -->
 	</properties>
 
+	<!-- Dependencias del proyecto -->
 	<dependencies>
 
-		<!-- SERVLET API -->
+		<!-- API de Servlet: Necesaria para el desarrollo de servlets -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet-api.version}</version>
-			<scope>provided</scope>
+			<scope>provided</scope> <!-- Indica que esta dependencia es proporcionada por el servidor en tiempo de ejecución -->
 		</dependency>
 
-		<!-- JSTL API FOR JSP PAGE -->
+		<!-- API de JSTL: Proporciona tags para las páginas JSP -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
 
-		<!-- JSP API -->
+		<!-- API de JSP: Para el desarrollo de páginas JSP -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -47,7 +52,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- SPRING FRAMERWORKS API -->
+		<!-- Dependencias de Spring Framework: Para el soporte de inyección de dependencias y MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -64,14 +69,14 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- LOG4J API -->
+		<!-- API de Log4j: Para la gestión de logs -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
 		
-		<!-- LOMBOK API -->
+		<!-- Lombok: Herramienta para la reducción de código repetitivo, como getters, setters -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -79,7 +84,7 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- Swagger UI -->
+		<!-- Swagger UI: Herramienta para documentar y probar servicios REST -->
 		<dependency>
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger2</artifactId>
@@ -91,7 +96,7 @@
 		    <version>2.9.2</version>
 		</dependency>
 		
-		<!-- Jackson -->
+		<!-- Jackson: Bibliotecas para el trabajo con JSON -->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-core</artifactId>
@@ -108,17 +113,18 @@
 		    <version>2.9.8</version>
 		</dependency>
 
-		<!-- TEST API -->
+		<!-- JUnit: Framework para pruebas unitarias -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
-			<scope>test</scope>
+			<scope>test</scope> <!-- Indica que esta dependencia solo se utiliza para las pruebas -->
 		</dependency>
 
 	</dependencies>
 
+	<!-- Configuración de la construcción del proyecto -->
 	<build>
-		<finalName>${project.artifactId}</finalName>
+		<finalName>${project.artifactId}</finalName> <!-- Nombre final del artefacto generado -->
 	</build>
 </project>

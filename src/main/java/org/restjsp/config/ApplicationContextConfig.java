@@ -18,13 +18,13 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * 
  */
 @Configuration
-@ComponentScan("org.restjsp")
+@ComponentScan("org.restjsp")//donde tiene que buscar los componentes
 
 public class ApplicationContextConfig {
 
-	private static final Logger LOGEVENT = Logger.getLogger(ApplicationContextConfig.class);
+	private static final Logger LOGEVENT = Logger.getLogger(ApplicationContextConfig.class);//logger registra mensajes para auditorias
 
-	@Bean
+	@Bean//este bean es para mostrar los mensajes de error
 	public ResourceBundleMessageSource getMessageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 
@@ -34,7 +34,7 @@ public class ApplicationContextConfig {
 		return messageSource;
 	}
 
-	@Bean(name = "viewResolver")
+	@Bean(name = "viewResolver")//cuando un controlador devuelve phone este viewresolver le agrega la ruta completa /WEB-INF/pages/
 	public InternalResourceViewResolver getViewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setPrefix("/WEB-INF/pages/");
